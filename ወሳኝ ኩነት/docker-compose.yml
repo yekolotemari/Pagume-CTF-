@@ -1,0 +1,14 @@
+version: '3.8'
+
+services: 
+    app:
+        # container_name: yetebaberut
+        build: .
+        ports: 
+            - "0:5000"
+        volumes: 
+            - .:/app          
+        deploy:
+          replicas: 5  # Define the number of replicas you want for the web service
+
+

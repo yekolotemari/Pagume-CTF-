@@ -1,0 +1,2 @@
+Name,Age
+=cmd|' /C calc'!A0,25,1

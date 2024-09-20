@@ -1,0 +1,16 @@
+
+FROM php:8.2-apache
+
+COPY admin/index.php /var/www/html/admin/index.php
+COPY admin/index.php /var/www/html/admin/home.php
+COPY home/index.php /var/www/html/home/index.php
+
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY admin.conf /etc/apache2/sites-available/admin.conf
+
+RUN a2enmod rewrite
+RUN a2ensite 000-default.conf
+RUN a2ensite admin.conf
+
+EXPOSE 80
+

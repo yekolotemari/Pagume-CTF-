@@ -1,0 +1,146 @@
+[
+    {
+        "label": "sendfile",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_file",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.request",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "detail": "urllib.request",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index():\n    return render_template('index.html')\n@app.route(\"/login\", methods=[\"POST\"])\ndef post_login():\n    username = request.form.get('username')\n    password = request.form.get('password')\n    # Check username and password (dummy check for demonstration)\n    if username == 'admin' and password == 'password':\n        # Successful login, redirect to dashboard\n        return jsonify({\"success\": \"true\"}), 200",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "post_login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def post_login():\n    username = request.form.get('username')\n    password = request.form.get('password')\n    # Check username and password (dummy check for demonstration)\n    if username == 'admin' and password == 'password':\n        # Successful login, redirect to dashboard\n        return jsonify({\"success\": \"true\"}), 200\n    else:\n        # Failed login, return error response\n        return 'Login failed', 401",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "index_login",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def index_login():\n    return render_template('login.html')\n@app.route(\"/v2/dashboard\")\ndef userDashboard():\n    cookie = request.data\n    return render_template('dashboard.html')\n@app.route(\"/dashboard/name\", methods=[\"post\"])\ndef usergetbyname():\n    name = request.form.get(\"k_name\")\n    result = \"under maintenance\" ",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "userDashboard",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def userDashboard():\n    cookie = request.data\n    return render_template('dashboard.html')\n@app.route(\"/dashboard/name\", methods=[\"post\"])\ndef usergetbyname():\n    name = request.form.get(\"k_name\")\n    result = \"under maintenance\" \n    kebeles = [\"piyassa/10\", \"ledeta/21\", \"arada/11\",\"saris/05\"]\n    if name in kebeles:\n        name = name.replace(\"/\", \"_\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "usergetbyname",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def usergetbyname():\n    name = request.form.get(\"k_name\")\n    result = \"under maintenance\" \n    kebeles = [\"piyassa/10\", \"ledeta/21\", \"arada/11\",\"saris/05\"]\n    if name in kebeles:\n        name = name.replace(\"/\", \"_\")\n        return send_file(f\"static/images/{name}.png\")\n    else:\n        return jsonify({\"error\": \"not found\"}), 404\n@app.route(\"/dashboard/url\", methods=[\"POST\"])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "userGetURL",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def userGetURL():\n    url = request.form.get(\"k_url\") \n    print(\"->>>>> \", url)\n    block_schemes = [\"file\", \"gopher\", \"expect\", \"php\", \"dict\", \"ftp\", \"glob\", \"data\"]\n    block_host = [\"instagram.com\", \"youtube.com\", \"file\", \"burpcolaborator\", ]\n    input_scheme = urlparse(url).scheme\n    input_hostname = urlparse(url).hostname\n    print(\"->>>>> \", urlparse(url),  input_hostname)\n    # if \"www\" in input_hostname: \n    #     input_hostname = input_hostname.split(\"www.\")[-1]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n@app.route(\"/\")\ndef index():\n    return render_template('index.html')\n@app.route(\"/login\", methods=[\"POST\"])\ndef post_login():\n    username = request.form.get('username')\n    password = request.form.get('password')\n    # Check username and password (dummy check for demonstration)\n    if username == 'admin' and password == 'password':",
+        "detail": "app",
+        "documentation": {}
+    }
+]

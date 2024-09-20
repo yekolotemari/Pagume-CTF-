@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block title %}
+  {{ super() }}
+  Index 
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="header m-5 h-20 border-2 border-gray-700 flex " > 
+    <div class="border-2 border-gray-300 border-b-4 border-b-gray-500 text-xl flex items-center w-full px-10" > 
+        <p> የአገልጋይ ወገን ጥያቄ የውሸት ብዝበዛ ሪፖርት </p>
+    </div>
+    <div class="flex p-2 m-2 items-center justify-center ">
+        <a class="border-b-2 border-gray-400" href="/login">ይግቡ </a>
+    </div>
+</div>
+
+<div class=""> </div> 
+
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <span class="text-xl font-semibold text-white">Ethiopian Governance</span>
+                <!-- Add your navigation links if necessary -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto py-8">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl font-bold mb-4">Governance in Ethiopia</h1>
+            <p class="mb-4">Ethiopia, a country located in the Horn of Africa, has a long history of diverse governance systems. From ancient monarchies to modern democratic republics, Ethiopia's governance structure has evolved over time.</p>
+            <p class="mb-4">Currently, Ethiopia operates under a federal parliamentary republic framework. The Federal Government is responsible for national-level governance, while regional states have significant autonomy in local governance matters.</p>
+            <p class="mb-4">The Ethiopian political landscape is characterized by a multi-party system, with the Ethiopian People's Revolutionary Democratic Front (EPRDF) historically dominating politics. However, recent years have seen significant political reforms, including the emergence of new political parties and efforts to promote inclusivity and democracy.</p>
+            <p class="mb-4">Challenges remain in Ethiopia's governance, including issues related to ethnic tensions, human rights violations, and economic disparities. Addressing these challenges requires concerted efforts from all stakeholders, including government institutions, civil society, and the international community.</p>
+            <p class="mb-4">Despite these challenges, Ethiopia has made progress in various governance indicators, including improving access to education, healthcare, and infrastructure. Continued efforts toward good governance, transparency, and accountability are essential for Ethiopia's sustainable development and prosperity.</p>
+            <!-- Add more content as needed -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+          {% block footer %}
+    <footer class="bg-gray-900 text-white py-4 flex items-end">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Ethiopian Governance | All Rights Reserved</p>
+        </div>
+    </footer>
+      {% endblock %}
+
+{% endblock %}

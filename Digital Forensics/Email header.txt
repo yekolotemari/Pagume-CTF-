@@ -1,0 +1,63 @@
+Received: from S-M-EXCH-T-02.Abcdbank.com (192.168.1.20) by
+ S-M-EXCH-P-02.Abcdbank.com (192.168.1.21) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.2507.6 via Mailbox Transport; Tue, 1 Aug 2023 09:58:13 +0300
+Received: from EXHT01.Abcdbank.com (192.168.1.21) by
+ S-M-EXCH-T-02.Abcdbank.com (192.168.1.21) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.1.2507.6; Tue, 1 Aug 2023 09:58:12 +0300
+Received: from a-m-smg-T-01.Abcdbank.com (192.168.1.27) by
+ EXHT01.Abcdbank.com (192.168.1.20) with Microsoft SMTP Server id
+ 15.1.2507.23 via Frontend Transport; Tue, 1 Aug 2023 09:58:12 +0300
+X-AuditID: 0a01011b-8dbe4700000036a4-11-64c8acfe75bc
+Received: from ebifccidgbgj.ams03.turbo-smtp.net (ebifccidgbgj.ams03.turbo-smtp.net [185.228.36.169])
+	by a-m-smg-T-01.Abcdbank.com (Symantec Messaging Gateway) with SMTP id 11.0A.13988.FFCA8C46; Tue,  1 Aug 2023 09:58:10 +0300 (EAT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=aztec101.com; s=turbo-smtp; x=1691477888; h=Received:Received:
+	From:Subject:To:Content-Type:MIME-Version:Reply-To:Date:
+	Feedback-Id:Message-ID; bh=SjsvVPUTc6C9H9r6snbBxcYl5aQlVSI0Pm8ay
+	RulBHY=; b=YWoQHKtipQbgvTtsvnKfcjvxWTQE2sPQ27g0FDbdwgAFkm75Gf7et
+	J5oJyPyHLPgOG7yTMnSmXmvi8NJGnp9Ahr+WVXLnvKKmsV4hPzR9JPQaX4Mg6tnP
+	ZhpEN9N6B3WOKWfHBD9lxkQCt06n4knLBIaKEKwGKVGQYzhE8C5WTE=
+Received: (qmail 3746919 invoked from network); 1 Aug 2023 06:58:05 -0000
+Received: from ?UNAVAILABLE? (HELO 162.246.18.188) (authenticated@162.246.18.188)  by turbo-smtp.com with SMTP; 1 Aug 2023 06:58:05 -0000
+X-TurboSMTP-Tracking: 64-013edccb-000018f22d51ca812000-000-3b42a5f5
+From: "A.Z T E C H" <mart@aztec101.com>
+Subject: Europe Training Courses
+To: "Abdisa.Yekoltemari" <Abdisa.Yekoltemari@abcdbank.com>
+Content-Type: multipart/alternative; boundary="Ajt2r4j=_cOskGQaqNfBOdiSC0JSXz36IX"
+MIME-Version: 1.0
+Reply-To: "A.Z T E CH" <info@aztechtraining.com>
+Date: Mon, 31 Jul 2023 23:58:05 -0700
+Feedback-Id: 20896971
+Message-ID: <64-013edccb-000018f22d51ca812000-000-3b42a5f5@egwkj.smtpclick.com>
+Authentication-Results: symauth.service.identifier; senderid=pass; spf=pass
+	smtp.mailfrom=mart@aztec101.com smtp.helo=ebifccidgbgj.ams03.turbo-smtp.net
+X-Brightmail-Tracker: H4sIAAAAAAAAA3VTbUxTVxjm9N61l447L0XgtXyEdRA2hVJkZkNxM5MfkmVC3IeJc7Bir7Sj
+	H9AWRRDCMJC1Mkdw01IGKCIfq9Iog/DlqmXBitCxRbBmlYSByJjsq2MmMnS9XBD2Y3/e+57n
+	Oc/zvOfcHAITNBBCgs7X01q1VCni8vHuqcjWWM5Fh0zSYMNenbRMox1ol8n4fBrax0+S0UrF
+	IVob99qHfHn332O8nKaRiPzREgNWgq5bgo3IlwDqZbBOjyOmF1BzCC45/Y2IT+BUJwZD/Q1c
+	lkiBk6bTiCEElAGBu7KGy6p3wuL0wFLPpaKh4+smHtMHUBHwpN3NMSKCWE9tAbsrhWkxag/c
+	+ZTP7CApf7hRPYWz9hIY7jyzNANORcG1Y04O6xgIFlclzkhJKhXa68TMBIiqRnDFPs6pRJR5
+	1dW8xpWFXwJrTxwDY9QmaDr7C8bCIdD8mGDhF6Hsy1re/2w5g4ivUKg0VhWrU2XF5sRK4sUF
+	tIpWZ0rV2WKl5oBUeRl5fwAfoZAuNNe4KLYjDoHsaAvBEQWSyUUOmeC5TI3siFyqk2do85S0
+	TiQkkY+PjyDgKazLy1QpdDqFRm1HQGCi9WTIwnWZgJRJjxTQWg0rs6MQAhcFkyU33pYJqCyp
+	ns6m6Rxau8JuIwgRkMUWb6C/ls6i8w8qlPoVWhTGZgatZdbGcghfO0og/LzZexkLUpcjVekU
+	WcvyDaxcsIKulYYT64R+eepsteawOiNPq9T9dzWIConzFbYrGPGj/Za3tvYztXepVvw56q11
+	1WPe2jJffhUjDDajt85M1lzDBLhao6aFwWQ0MxDFRMvz1E+PJAwlU8O9txS4hlgda+VR/IDC
+	hAHs8H7ey1Ip9MsnWuZn0W1EIFEAeZsJ8VOo9auHBlbnvwyumm8+59VQ1ldgvC0KZhxp3m8Z
+	ggceIwLTt2cR1Iw0ICg9YUHQ+ND7mIwPv+CAyVrLgW+mH3DA5TBgUOeuwsCz4MSg/rcRDB6P
+	3sWgu6UZh5E6Fw4XhqZwuHXvHhfGrY+44C47xwPTRDcPPK1/8OBE6T88sM21EeBuv0/AkwWD
+	L7gvjflC16lyPsx/4uSDwzP8rLCE8/OjIMWFoaPp+1Nvzi0oY2YbfY8ZO95KGt69K2PHC3jK
+	1oo+oUs6+PH2vZc3n7ZxJeUS2Z3Cgd2l+ojv0oTJ6L3mtNygQ42d0s/ur1M7fYpyS8YmZs07
+	J/vxq7WR6X2jlZPZYWGFnu6PwByf+MypLkgMdQ63JbYEdvXFUZVU+gHe/rvzEYtJCXUD9T2m
+	oxM/HQ6PHDTvE3dQhZyDtTFcj5bbXGROfv/dim3B5O+j1Z2vT/SM6xr2RCVRWyVzidvfKY4J
+	uKlwXmzZ+Gtz6ckPNtW7emdnqub5x88HDYj/ojccz5jtfUMjmpkPThjKNVDcxjc/rxqzfF9s
+	k2sKoh3WYXpKhOvk0viNmFYn/RefHJI7NQUAAA==
+Return-Path: mart@aztec101.com
+X-MS-Exchange-Organization-Network-Message-Id: 3bd8a0da-e561-4e2c-706e-08db925cac2f
+X-MS-Exchange-Organization-AVStamp-Enterprise: 1.0
+X-MS-Exchange-Organization-AuthSource: EXHT01.abcdbank.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.4666427
+X-MS-Exchange-Processed-By-BccFoldering: 15.01.2507.006

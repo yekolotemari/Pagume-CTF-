@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+{% block title %}
+ Dashboard 
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Yetebaberut</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container m-auto  border-2 border-gray-300 " >
+    <div class="h-30 w-full border-2 border-gray-400 border-b-2 border-b-black p-4 text-xl" > 
+        <p>የአገልጋይ ወገን ጥያቄ የውሸት ብዝበዛ ሪፖርት</p>
+
+
+    </div>
+    <div class="flex justify-center m-5"> 
+        <form id="sendWithName"> 
+        <div class="hidden font-mono h-10 w-full border-2 border-gray-500 rounded-xl bg-red-400 font-bold items-center p-1" id="errorName" ></div>
+            <div class="flex flex-col justify-center">
+                <label for="k_name" class="mb-1">የቀበሌ ሪፖርት ያግኙ:</label>
+                <input class="border-2 border-gray-200 p-1 mb-3 w-80" placeholder="eg. piyasa/10" type="text" id="k_name" name="k_name">
+                <button type="submit" class="ml-1 bg-blue-500 text-white px-3 py-1 rounded">Submit</button>
+                <!-- <div class="resultUrl w-full my-3" > --> 
+                    
+                <!-- </div> -->
+
+            </div>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="flex flex-col justify-center items-center py-5"> 
+        <p>==  ወይም ዩአርኤል ይጠቀሙ   == </p>
+    </div>
+    <hr>
+   <div class="flex justify-center m-5 "> 
+        <form id="sendWithUrl" > 
+        <div class="hidden font-mono h-10 w-full border-2 border-gray-500 rounded-xl bg-red-400 font-bold items-center p-1" id="errorUrl" ></div>
+            <div class="flex flex-col justify-center">
+                <label for="url" class="mb-4"> የወረዳዎን ሪፖርት በዩአርኤል ማስፈንጠሪያ ያግኙ:</label>
+                <input class="border-2 border-gray-200 p-1 mb-4" placeholder="eg. piyasa.gov.addis" type="text" id="k_url" name="url">
+                <button type="submit" class="ml-2 bg-blue-500 text-white px-3 py-1 rounded">Submit</button>
+                <div id="resultUrl" class="w-full my-3" > 
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+    var storage = localStorage.getItem('user'); 
+    if(!storage){window.location.replace("/login");}
+
+    document.getElementById('sendWithUrl').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var kebele_url = document.getElementById('k_url').value;
+        var err = document.getElementById('errorUrl');
+
+        // Create a FormData object and append the login credentials
+        var formData = new FormData();
+        formData.append('k_url', kebele_url);
+
+        // Send the login credentials to Flask backend using fetch API
+        fetch('/dashboard/url', {
+            method: 'POST',
+            body: formData  // No need to set Content-Type, FormData sets it automatically
+        })
+            .then(function(response) {
+                if (response.ok) {
+                    response.json().then(function(jsonBody) {
+                    var result = document.getElementById("resultUrl");
+                    result.textContent = jsonBody.data;
+                    console.log(jsonBody.data);
+
+                });
+                    console.log(response)
+                } else {
+                    response.json().then(function(data) {
+                        err.classList.remove("hidden");
+                        err.textContent = `${data.error} try maybe arada.addis.gov or saris.addis.gov`;
+
+                    console.error(data.error);
+                });
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+            });
+    });
+    document.getElementById('sendWithName').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var kebele_name = document.getElementById('k_name').value;
+        var err = document.getElementById('errorName');
+
+        // Create a FormData object and append the login credentials
+        var formData = new FormData();
+        formData.append('k_name', kebele_name);
+
+        // Send the login credentials to Flask backend using fetch API
+        fetch('/dashboard/name', {
+            method: 'POST',
+            body: formData  // No need to set Content-Type, FormData sets it automatically
+        })
+            .then(function(response) {
+                if (response.ok) {
+                    response.blob().then(function(imageBlob) {
+                    var imageUrl = URL.createObjectURL(imageBlob);
+                    window.open(imageUrl, '_blank');
+                });
+                } else {
+                    response.json().then(function(data) {
+                        err.classList.remove("hidden");
+                        err.textContent = `${data.error}: try maybe arada/11 or saris/05`;
+
+                    console.error(data.error);
+                });
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+            });
+    });
+</script>
+{% endblock %}
